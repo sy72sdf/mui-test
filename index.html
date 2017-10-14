@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init()
+    </script>
+    <style>
+    	.pInformation{
+    		height: 10rem;
+    	}
+    	.pInformation div{
+    		height: 6rem;
+    		width: 6rem;
+    		background: #FFFFFF;
+    		border-radius: 50%;
+    		margin: 2rem 0 0 0.5rem;
+    		display: inline-block;
+    	}
+    	.pInformation span{
+    		display: inline-block;
+    		color: #FFFFFF;
+    		margin: 4rem 0 0 0.8rem;
+    	}
+    	.contentList{
+    		margin-top:1rem;
+    		border-top: solid 1px #ccc;
+    	}
+    </style>
+</head>
+<body>
+	<div class="mui-off-canvas-wrap mui-draggable" id="offCanvasWrapper">
+	  <!-- 菜单容器 -->
+	  <aside class="mui-off-canvas-left" id="showMenu">
+	    <div class="mui-scroll-wrapper">
+	      <div class="mui-scroll">
+	      	<!--个人信息-->
+	      	<div class="pInformation">
+	      		<div class="mui-pull-left">
+	      		<!--头像-->	
+	      		</div>
+	      		<span>ID:123123123<br />余额:￥100.00</span>
+	      	</div>
+	        <!-- 菜单具体展示内容 -->
+	        <ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
+	        	<li class="mui-table-view-cell">
+	        		<a>
+	        			<span class="mui-icon mui-icon-info"></span> 个人信息
+	        		</a>
+	        	</li>
+	        	<li class="mui-table-view-cell">
+	        		<a>
+	        			<span class="mui-icon mui-icon-info"></span> 钱包余额
+	        		</a>
+	        	</li>
+	        	<li class="mui-table-view-cell">
+	        		<a>
+	        			<span class="mui-icon mui-icon-info"></span> 我的好友
+	        		</a>
+	        	</li>
+	        	<li class="mui-table-view-cell">
+	        		<a>
+	        			<span class="mui-icon mui-icon-info"></span> 系统消息
+	        		</a>
+	        	</li>
+	        	<li class="mui-table-view-cell">
+	        		<a>
+	        			<span class="mui-icon mui-icon-info"></span> 设置
+	        		</a>
+	        	</li>
+	        </ul>
+	      </div>
+	    </div>
+	  </aside>
+	  <!-- 主页面容器 -->
+	  <div class="mui-inner-wrap">
+	  	<!--遮罩层-->
+	  	<div class="mui-off-canvas-backdrop"></div>
+	    <!-- 主页面标题 -->
+	    <header class="mui-bar mui-bar-nav">
+	      <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#showMenu"></a>
+	      <h1 class="mui-title">Test</h1>
+	    </header>
+	    <!--底部选项卡-->
+	    <nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="#tabbar">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-chat">
+				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+				<span class="mui-tab-label">新闻</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-contact">
+				<span class="mui-icon mui-icon-contact"><span class="mui-badge">3</span></span>
+				<span class="mui-tab-label">好友</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-map">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">设置</span>
+			</a>
+		</nav>   
+	    <div class="mui-content mui-scroll-wrapper" id="mainPage">
+	      <div class="mui-scroll">
+	        <!-- 主界面具体展示内容 -->
+	        <!--轮播图-->
+	        <div class="mui-slider" id="slider">
+			  <div class="mui-slider-group mui-slider-loop">
+			    <!--支持循环，需要重复图片节点-->
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			    	<a href="#">
+			    		<img src="img/test4.jpg" />
+			    		<p class="mui-slider-title">Grand Theft Auto V</p>
+			    	</a>
+			    </div>
+			    <div class="mui-slider-item">
+			    	<a href="#">
+			    		<img src="img/test.jpg" />
+			    		<p class="mui-slider-title">The Witcher 3</p>
+			    	</a>
+			    </div>
+			    <div class="mui-slider-item">
+			    	<a href="#">
+			    		<img src="img/test2.jpg" />
+			    		<p class="mui-slider-title">Dark Soul 3</p>
+			    	</a>
+			    </div>
+			    <div class="mui-slider-item">
+			    	<a href="#">
+			    		<img src="img/test3.jpg" />
+			    		<p class="mui-slider-title">Watch Dog 2</p>
+			    	</a>
+			    </div>
+			    <div class="mui-slider-item">
+			    	<a href="#">
+				    	<img src="img/test4.jpg" />
+				    	<p class="mui-slider-title">Grand Theft Auto V</p>
+			    	</a>
+			    </div>
+			    <!--支持循环，需要重复图片节点-->
+			    <div class="mui-slider-item mui-slider-item-duplicate">
+			    	<a href="#">
+			    		<img src="img/test.jpg" />
+			    		<p class="mui-slider-title">The Witcher 3</p>
+			    	</a>
+			    </div>
+			  </div>
+			  	<div class="mui-slider-indicator mui-text-right">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+	        <!--图文列表-->
+			<ul class="mui-table-view" id="refreshContainer">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="img/test5.jpg">
+						<div class="mui-media-body">
+							幸福
+							<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="img/test6.jpg">
+						<div class="mui-media-body">
+							木屋
+							<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="img/test7.jpg">
+						<div class="mui-media-body">
+							CBD
+							<p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="img/test8.jpg">
+						<div class="mui-media-body">
+							幸福
+							<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="img/test5.jpg">
+						<div class="mui-media-body">
+							木屋
+							<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="img/test5.jpg">
+						<div class="mui-media-body">
+							CBD
+							<p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="img/test5.jpg">
+						<div class="mui-media-body">
+							CBD
+							<p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			
+	      </div>
+	    </div>  
+	  </div>
+	</div>
+</body>
+<script>
+var offCanvasWrapper = mui('#offCanvasWrapper')
+document.getElementById('mainPage').addEventListener('tap',function(){
+	if(offCanvasWrapper.offCanvas().isShown()){
+		offCanvasWrapper.offCanvas('close');
+	}
+})
+mui("#slider").slider({
+	interval: 3000
+});
+mui('.mui-scroll-wrapper').scroll({deceleration: 0.0005});
+</script>
+</html>
