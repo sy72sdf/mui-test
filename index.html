@@ -7,7 +7,7 @@
     <script src="js/mui.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
     <script type="text/javascript" charset="utf-8">
-      	mui.init()
+     mui.init()
     </script>
     <style>
     	.pInformation{
@@ -47,14 +47,14 @@
 	      	</div>
 	        <!-- 菜单具体展示内容 -->
 	        <ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
-	        	<li class="mui-table-view-cell">
+	        	<li class="mui-table-view-cell" id="pmessage">
 	        		<a>
-	        			<span class="mui-icon mui-icon-info"></span> 个人信息
+	        			<span class="mui-icon mui-icon-info"></span> 最新咨询
 	        		</a>
 	        	</li>
 	        	<li class="mui-table-view-cell">
 	        		<a>
-	        			<span class="mui-icon mui-icon-info"></span> 钱包余额
+	        			<span class="mui-icon mui-icon-info"></span> 个人信息
 	        		</a>
 	        	</li>
 	        	<li class="mui-table-view-cell">
@@ -86,24 +86,9 @@
 	      <h1 class="mui-title">Test</h1>
 	    </header>
 	    <!--底部选项卡-->
-	    <nav class="mui-bar mui-bar-tab">
-			<a class="mui-tab-item mui-active" href="#tabbar">
-				<span class="mui-icon mui-icon-home"></span>
-				<span class="mui-tab-label">首页</span>
-			</a>
-			<a class="mui-tab-item" href="#tabbar-with-chat">
-				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
-				<span class="mui-tab-label">新闻</span>
-			</a>
-			<a class="mui-tab-item" href="#tabbar-with-contact">
-				<span class="mui-icon mui-icon-contact"><span class="mui-badge">3</span></span>
-				<span class="mui-tab-label">好友</span>
-			</a>
-			<a class="mui-tab-item" href="#tabbar-with-map">
-				<span class="mui-icon mui-icon-gear"></span>
-				<span class="mui-tab-label">设置</span>
-			</a>
-		</nav>   
+	    
+	    
+	    
 	    <div class="mui-content mui-scroll-wrapper" id="mainPage">
 	      <div class="mui-scroll">
 	        <!-- 主界面具体展示内容 -->
@@ -239,5 +224,11 @@ mui("#slider").slider({
 	interval: 3000
 });
 mui('.mui-scroll-wrapper').scroll({deceleration: 0.0005});
+document.getElementById('pmessage').addEventListener('tap',function(){
+	mui.openWindow({
+		url:'pullrefresh.html',
+		id:'info'
+	})
+})
 </script>
 </html>
